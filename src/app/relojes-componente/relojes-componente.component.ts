@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-relojes-componente',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './relojes-componente.component.html',
-  styleUrl: './relojes-componente.component.css'
+  styleUrls: ['./relojes-componente.component.css']
 })
 export class RelojesComponenteComponent {
 

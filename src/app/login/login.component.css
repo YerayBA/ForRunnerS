@@ -7,11 +7,15 @@ body {
     background-color: #f8e0e0;
     font-family: Arial, sans-serif;
     margin: 0;
+    background-image: url("C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/FondoPantalla.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
   }
   
 
   div {
-    background: white;
+    
     padding: 30px;
     width: 300px;
     position: absolute;
@@ -21,6 +25,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    opacity: 0.8;
 }
 
 
