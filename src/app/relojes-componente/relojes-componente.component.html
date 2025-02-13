@@ -1,8 +1,9 @@
 <div class="catalog">
-    <h1>Catálogo de Relojes Deportivos</h1>
+    <h1>Relojes Deportivos</h1>
+    <h2>Top relojes mejor valorados</h2>
     
     <div class="reloj" *ngFor="let reloj of relojes">
-      <img [src]="reloj.imagen" [alt]="reloj.marca" [title]="reloj.marca">
+      <img [src]="reloj.imagen" [alt]="reloj.alt" [title]="reloj.marca">
       <h2>{{ reloj.marca }}</h2>
       <p>⭐ Puntuación: {{ reloj.puntuacion }} / 5</p>
     </div>

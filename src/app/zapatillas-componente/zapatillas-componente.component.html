@@ -1,1 +1,10 @@
-<p>zapatillas-componente works!</p>
+<div class="catalog">
+    <h1>Zapatillas Running</h1>
+    <h2>Top Zapatillas mejor valoradas</h2>
+    
+    <div class="Zapatillas" *ngFor="let zapatilla of zapatillas">
+      <img [src]="zapatilla.imagen" [alt]="zapatilla.alt" [title]="zapatilla.marca">
+      <h2>{{ zapatilla.marca }}</h2>
+      <p>⭐ Puntuación: {{ zapatilla.puntuacion }} / 5</p>
+    </div>
+  </div>
