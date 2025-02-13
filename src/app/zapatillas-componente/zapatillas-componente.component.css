@@ -1,11 +1,11 @@
-/* Centrar el catálogo */
+
 .catalog {
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
   }
   
-  /* Diseño de cada reloj */
+  
   .Zapatillas {
     display: inline-block;
     width: 250px;
@@ -22,13 +22,12 @@
     transform: scale(1.05);
   }
   
-  /* Imagen del reloj */
+
   .zapatillas img {
     width: 100%;
     border-radius: 10px;
   }
-  
-  /* Títulos */
+
   h1 {
     color: #d9534f;
     margin-bottom: 20px;
@@ -39,7 +38,7 @@
     margin: 10px 0;
   }
   
-  /* Puntuación */
+
   p {
     font-size: 16px;
     color: #666;
