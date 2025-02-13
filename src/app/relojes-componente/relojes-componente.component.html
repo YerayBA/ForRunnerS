@@ -1,1 +1,10 @@
-<p>relojes-componente works!</p>
+<div class="catalog">
+    <h1>Catálogo de Relojes Deportivos</h1>
+    
+    <div class="reloj" *ngFor="let reloj of relojes">
+      <img [src]="reloj.imagen" [alt]="reloj.marca" [title]="reloj.marca">
+      <h2>{{ reloj.marca }}</h2>
+      <p>⭐ Puntuación: {{ reloj.puntuacion }} / 5</p>
+    </div>
+  </div>
+  

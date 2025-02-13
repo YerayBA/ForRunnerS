@@ -1,16 +1,16 @@
-/* Centramos el contenedor en la pantalla */
+
 .container {
     display: flex;
-    justify-content: space-around; /* Espaciado uniforme entre los divs */
+    justify-content: space-around; 
     align-items: center;
     height: 80vh;
   }
   
-  /* Estilos de cada div */
+  
   .box {
     width: 320px;
     height: 300px;
-    background: #d9534f; /* Rojo suave */
+    background: #d9534f; 
     color: white;
     display: flex;
     justify-content: center;
@@ -29,4 +29,8 @@
     font-family: Arial, sans-serif;
     margin: 0;
     
+  }
+
+  .box:hover {
+    background-color: #b52b27;
   }
