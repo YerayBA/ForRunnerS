@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-formulario-recuperar',
   imports: [FormsModule],
   templateUrl: './formulario-recuperar.component.html',
-  styleUrl: './formulario-recuperar.component.css'
+  styleUrl: '../login/login.component.css'
 })
 export class FormularioRecuperarComponent {
 

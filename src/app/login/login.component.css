@@ -1,0 +1,74 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+
+  div {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+  h1 {
+    color: #d9534f; /* Rojo suave */
+    margin-bottom: 20px;
+  }
+  
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d9534f;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+ 
+  input:focus {
+    border-color: #b52b27;
+    box-shadow: 0 0 5px rgba(181, 43, 39, 0.5);
+  }
+  
+  /* Botón */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Efecto hover del botón */
+  button:hover {
+    background-color: #b52b27;
+  }
+  
+  /* Mensaje de error */
+  .error {
+    color: #b52b27;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

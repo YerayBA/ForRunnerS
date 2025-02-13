@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-formulario-registro',
   imports: [],
   templateUrl: './formulario-registro.component.html',
-  styleUrl: './formulario-registro.component.css'
+  styleUrl: '../login/login.component.css'
 })
 export class FormularioRegistroComponent {
 
