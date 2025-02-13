@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule} from '@angular/router';
+import { Router, RouterModule} from '@angular/router';
+import { AutenticacionService } from '../autenticacion.service'
 
 
 @Component({
@@ -10,26 +11,22 @@ import { RouterModule} from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  
 
-  constructor() { }
 
   ngOnInit(): void {
   }
 
-  usuario ="";
-  password ="";
-  
+  username = '';
+  password = '';
+  errorMessage = '';
+
+  constructor(private AutenticacionService: AutenticacionService, private router: Router) {}
 
  IniciarSesion(){
 
-  if(this.usuario == "admin" && this.password == "admin"){
-   
-    alert("Bienvenido : "+this.usuario);
-    
+  this.AutenticacionService.login(this.username, this.password);
 
-  }else{
-    alert("Usuario o contraseña incorrecta");
-  }
 }
 
 }
