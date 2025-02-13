@@ -1,0 +1,23 @@
+
+<div class="container">
+
+    <h1>ForRunnerS</h1>
+    
+    <input type="text" [(ngModel)]="usuario" placeholder="Usuario">
+    
+    <br>
+    
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+    
+    <br>
+    
+    <button (click)="IniciarSesion()">Iniciar Sesion</button>
+    
+    <br>
+
+    <a [routerLink]="'/formulario-registro'">¿Todavía no tienes cuenta?</a>
+
+    <a [routerLink]="'/formulario-recuperar'">¿Olvidaste tu contraseña?</a>
+    
+    </div>
+  
