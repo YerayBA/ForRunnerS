@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule} from '@angular/router';
-import { AutenticacionService } from '../autenticacion.service'
+import { AuthService } from '../autenticacion.service'
 
 
 @Component({
@@ -12,21 +12,26 @@ import { AutenticacionService } from '../autenticacion.service'
 })
 export class LoginComponent {
   
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
+  constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
+  onLogin(): void {
+    this.authService.login(this.username, this.password).subscribe(
+      (response) => {
+       
+        const token = response.token;
+        this.authService.setToken(token);
+        this.router.navigate(['/paginaprincipal']); 
+      },
+      (error) => {
+       
+        this.errorMessage = 'Usuario o contraseña incorrectos';
+        console.error('Login error:', error);
+      }
+    );
   }
-
-  username = '';
-  password = '';
-  errorMessage = '';
-
-  constructor(private AutenticacionService: AutenticacionService, private router: Router) {}
-
- IniciarSesion(){
-
-  this.AutenticacionService.login(this.username, this.password);
-
-}
 
 }

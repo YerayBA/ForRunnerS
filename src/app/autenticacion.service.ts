@@ -1,27 +1,38 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AutenticacionService {
-  constructor(private router: Router) {}
+export class AuthService {
+  private apiUrl = 'https://localhost:7208/api/Auth/login'; 
 
-  login(username: string, password: string): boolean {
-    if (username === 'admin' && password === 'admin') {
-      localStorage.setItem('user', 'admin');
-      this.router.navigate(['/paginaprincipal']);
-      return true;
-    }
-    return false;
+  constructor(private http: HttpClient) {}
+
+  login(username: string, password: string): Observable<any> {
+    const body = { username, password };
+
+    return this.http.post(this.apiUrl, body).pipe(
+      catchError((error) => {
+        throw error; 
+      })
+    );
   }
 
+ 
+  setToken(token: string): void {
+    localStorage.setItem('authToken', token);
+  }
+
+
+  getToken(): string | null {
+    return localStorage.getItem('authToken');
+  }
+
+  
   isAuthenticated(): boolean {
-    return localStorage.getItem('user') === 'admin';
-  }
-
-  logout() {
-    localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    return this.getToken() !== null;
   }
 }

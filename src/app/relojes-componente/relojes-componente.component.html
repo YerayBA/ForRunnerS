@@ -4,8 +4,10 @@
     
     <div class="reloj" *ngFor="let reloj of relojes">
       <img [src]="reloj.imagen" [alt]="reloj.alt" [title]="reloj.marca">
-      <h2>{{ reloj.marca }}</h2>
-      <p>⭐ Puntuación: {{ reloj.puntuacion }} / 5</p>
+      <h1>{{ reloj.marca }}</h1>
+      <h2>{{ reloj.modelo }}</h2>
+      <p>⭐ Precio: {{ reloj.precio }} euros</p>
+      <p>⭐ Puntuación: {{ reloj.valoracion }} / 5</p>
     </div>
   </div>
   
