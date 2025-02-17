@@ -34,9 +34,10 @@ export class FormularioRegistroComponent {
     this.Register.registerUser(user).subscribe(
       (response) => {
         this.successMessage = response;
-        this.resultMessage = 'Se ha registrado con éxito';
+        this.successMessage = 'Se ha registrado con éxito';
       },
       (error) => {
+        this.resultMessage = error;
         this.resultMessage = 'Ocurrió un error durante el registro';
         
        
