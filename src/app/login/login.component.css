@@ -1,79 +1,72 @@
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-image: url("C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/FondoPantalla.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-  }
-  
-
-  div {
-    
-    padding: 30px;
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    opacity: 0.8;
+.main {
+  display: flex;
+  justify-content: space-between; /* Esto se asegura de que los divs se distribuyan horizontalmente */
+  align-items: stretch; /* Esto hace que los divs ocupen toda la altura de la pantalla */
+  height: 100vh;
+  background-color: #f8e0e0;
+  font-family: Arial, sans-serif;
 }
 
+.container, .container2 {
+  width: 50%; /* Ambos divs ocupan la mitad de la pantalla */
+  height: 100vh; /* Asegura que ambos divs tengan altura completa */
+  box-sizing: border-box;
+}
 
-  h1 {
-    color: #d9534f; 
-    margin-bottom: 20px;
-  }
-  
+.container {
+  padding: 30px;
+  background-color: #fff; /* Fondo blanco para el formulario */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
 
-  input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #d9534f;
-    border-radius: 8px;
-    outline: none;
-    transition: 0.3s;
-  }
-  
- 
-  input:focus {
-    border-color: #b52b27;
-    box-shadow: 0 0 5px rgba(181, 43, 39, 0.5);
-  }
-  
+.container2 {
+  background-image: url("C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/FondoPantalla.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Asegura que la imagen ocupe todo el espacio disponible */
+  background-position: center;
+}
 
-  button {
-    width: 100%;
-    padding: 12px;
-    background-color: #d9534f;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-  }
-  
- 
-  button:hover {
-    background-color: #b52b27;
-  }
-  
-  
-  .error {
-    color: #b52b27;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
+h1 {
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #d9534f;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #b52b27;
+  box-shadow: 0 0 5px rgba(181, 43, 39, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #b52b27;
+}
+
+.error {
+  color: #b52b27;
+  margin-top: 10px;
+  font-size: 14px;
+}
