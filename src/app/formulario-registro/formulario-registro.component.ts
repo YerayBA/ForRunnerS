@@ -1,33 +1,45 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Register } from '../registro.service';
+
 
 @Component({
   selector: 'app-formulario-registro',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './formulario-registro.component.html',
   styleUrl: '../login/login.component.css'
 })
 export class FormularioRegistroComponent {
 
-  constructor() { }
+  nombreusuario: string = '';
+  email: string = '';
+  contrasena: string = '';
+  apellido="";
+  nombre="";
+  errorMessage: string = '';
+  successMessage: string = '';
 
-  ngOnInit(): void {
-  }   
+  constructor(private Register: Register) {}
 
-  contraseña ="";
-  confirmarContraseña ="";
+  register(): void {
+    const user = {
+      NombreUsuario: this.nombreusuario,
+      CorreoElectronico: this.email,
+      Contraseña: this.contrasena,
+      Nombre: this.nombre,
+      Apellido: this.apellido
+    };
 
-
-  ComprobarContrasena(){
-
-    if(this.contraseña == this.confirmarContraseña){
-      console.log("Las contraseñas coinciden");
-      alert("Las contraseñas coinciden");
+    this.Register.registerUser(user).subscribe(
+      (response) => {
+        this.successMessage = response;
+        this.errorMessage = '';
+      },
+      (error) => {
+        this.errorMessage = error.error || 'Ocurrió un error durante el registro';
+        this.successMessage = '';
+      }
+    );
   }
-
-    else{
-      console.log("Las contraseñas no coinciden");
-      alert("Las contraseñas no coinciden");
-    }
-}
+ 
 }

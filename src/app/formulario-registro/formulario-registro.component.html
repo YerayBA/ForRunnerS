@@ -1,17 +1,17 @@
 
 <div class="formulario-registro">
 
-    <input type="text" placeholder="Nombre" />
+    <input type="text" id="nombre" [(ngModel)]="nombre" name="username" placeholder="Nombre" required />
     <br>
-    <input type="text" placeholder="Apellido" />
+    <input type="text" id="apellido" [(ngModel)]="apellido" name="username" placeholder="Apellido" required />
     <br>
-    <input type="text" placeholder="Nombre de Usuario" />
+    <input type="text" id="nombreusuario" [(ngModel)]="nombreusuario" name="username" placeholder="Nombre de Usuario" required />
     <br>
-    <input type="password" placeholder="Contraseña" />
+    <input type="text" id="contraseña" [(ngModel)]="contrasena" name="username" placeholder="Contraseña" required />
     <br>
     <input type="password" placeholder="Confirmar Contraseña" />
     <br>
-    <input type="email" placeholder="Correo Electronico" />
+    <input type="text" id="email" [(ngModel)]="email" name="username" placeholder="Correo Electrónico" required />
     <br>
-    <button (click)="ComprobarContrasena()">Registrarse</button>
+    <button (click)="register()">Registrarse</button>
 </div>
