@@ -14,4 +14,7 @@
     <input type="text" id="email" [(ngModel)]="email" name="username" placeholder="Correo Electrónico" required />
     <br>
     <button (click)="register()">Registrarse</button>
+    
+    <p *ngIf="resultMessage" class="error">{{ resultMessage }}</p>
+
 </div>

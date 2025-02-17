@@ -19,7 +19,9 @@
         <br>
         <br>
         <a [routerLink]="'/formulario-recuperar'">¿Olvidaste tu contraseña?</a>
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     </div>
+    
 
 
 
