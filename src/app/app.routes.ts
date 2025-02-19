@@ -5,7 +5,7 @@ import { FormularioRecuperarComponent } from './formulario-recuperar/formulario-
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { RelojesComponenteComponent } from './relojes-componente/relojes-componente.component';
 import { ZapatillasComponenteComponent } from './zapatillas-componente/zapatillas-componente.component';
-import { CarrerasComponenteComponent } from './carreras-componente/carreras-componente.component';
+import { CarrerasComponente } from './carreras-componente/carreras-componente.component';
 import { AuthGuard } from './autenticator-guard.guard';
 
 export const routes: Routes = [
@@ -15,6 +15,6 @@ export const routes: Routes = [
     { path: 'paginaprincipal', component: PaginaprincipalComponent, canActivate: [AuthGuard] },
     { path : 'relojes-componente', component: RelojesComponenteComponent, canActivate: [AuthGuard] },
     { path: 'zapatillas-componente', component: ZapatillasComponenteComponent, canActivate: [AuthGuard] },
-    { path: 'carreras-componente', component: CarrerasComponenteComponent, canActivate: [AuthGuard] }
+    { path: 'carreras-componente', component: CarrerasComponente, canActivate: [AuthGuard] }
 
 ];

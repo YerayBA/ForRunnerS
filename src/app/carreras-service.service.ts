@@ -9,10 +9,22 @@ export class CarrerasService {
 
  private apiUrl = 'https://localhost:7208/obtenerCarrera'; 
 
+ private apiUrlEliminar = 'https://localhost:7208/BorrarCarrera';
+
+ private apiUrlModificar = '';
+
   constructor(private http: HttpClient) { }
 
-  // Método para obtener las zapatillas
+ 
   getCarreras(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+
+  eliminarCarrera(): Observable<any>{
+    return this.http.delete(this.apiUrlEliminar);
+  }
+
+  modificarCarrera(carrera: any): Observable<any>{
+    return this.http.put<any>(this.apiUrlModificar, carrera);
   }
 }

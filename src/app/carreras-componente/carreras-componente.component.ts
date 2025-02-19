@@ -8,7 +8,7 @@ import { CarrerasService} from '../carreras-service.service';
   templateUrl: './carreras-componente.component.html',
   styleUrl: './carreras-componente.component.css'
 })
-export class CarrerasComponenteComponent {
+export class CarrerasComponente {
 
   
   private CarrerasService = inject(CarrerasService); 
@@ -28,19 +28,20 @@ export class CarrerasComponenteComponent {
 
     selectedIndex: number | null = null;
 
-  // Mostrar las opciones al hacer clic en un div
+  
   showOptions(index: number): void {
-    this.selectedIndex = this.selectedIndex === index ? null : index; // Alterna la visibilidad del menú
+    this.selectedIndex = this.selectedIndex === index ? null : index; 
   }
 
   modificarCarrera(carrera: any): void {
     console.log('Modificar:', this.Carreras);
-    // Aquí puedes agregar la lógica para modificar la carrera
+
   }
 
-  eliminarCarrera(carrera: any): void {
-    console.log('Eliminar:', this.Carreras);
-    // Aquí puedes agregar la lógica para eliminar la carrera
+  eliminarCarrera(index:number): void {
+    if (index > -1) {
+      this.Carreras.splice(index, 1); 
+    }
   }
 
 }

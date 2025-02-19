@@ -7,7 +7,7 @@
       <p>⭐ Fecha de Celebracion: {{ Carrera.fechaCelebracion }}</p>
       <div *ngIf="selectedIndex === i" class="options-menu">
         <button (click)="modificarCarrera(Carrera)">Modificar</button>
-        <button (click)="eliminarCarrera(Carrera)">Eliminar</button>
+        <button (click)="eliminarCarrera(i)">Eliminar</button>
       </div>
     </div>
   </div>
