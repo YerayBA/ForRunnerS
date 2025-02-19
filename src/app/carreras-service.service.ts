@@ -25,7 +25,7 @@ export class CarrerasService {
     return this.http.delete(this.apiUrlEliminar);
   }
 
-  modificarCarrera(carrera: any, carreraModificada: any): Observable<any>{
-    return this.http.put<any>(this.apiUrlModificar, carrera, carreraModificada);
+  modificarCarrera( carreraModificada: any): Observable<any>{
+    return this.http.put<any>(this.apiUrlModificar, carreraModificada);
   }
 }

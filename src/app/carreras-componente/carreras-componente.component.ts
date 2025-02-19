@@ -14,7 +14,7 @@ export class CarrerasComponente {
   private CarrerasService = inject(CarrerasService); 
 
     Carreras: any[] = []; 
-    
+
     constructor() {
       
       this.CarrerasService.getCarreras().subscribe(
@@ -44,7 +44,7 @@ export class CarrerasComponente {
     const carreraModificada = this.Carreras[index];
 
    
-    this.CarrerasService.modificarCarrera(carreraModificada.id, carreraModificada).subscribe(
+    this.CarrerasService.modificarCarrera(carreraModificada).subscribe(
       (response) => {
         console.log('Carrera modificada:', response);
         
