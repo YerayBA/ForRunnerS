@@ -1,10 +1,14 @@
 <div class="catalog">
     <h1>Carreras</h1>
-    <div class="Carreras" *ngFor="let Carrera of Carreras">
+    <div class="Carreras" *ngFor="let Carrera of Carreras; let i = index" (click)="showOptions(i)">
       <h1>{{ Carrera.nombreCarrera }}</h1>
       <h2>{{ Carrera.lugar }}</h2>
       <p>⭐ Distancia: {{ Carrera.distancia }} Km</p>
       <p>⭐ Fecha de Celebracion: {{ Carrera.fechaCelebracion }}</p>
+      <div *ngIf="selectedIndex === i" class="options-menu">
+        <button (click)="modificarCarrera(Carrera)">Modificar</button>
+        <button (click)="eliminarCarrera(Carrera)">Eliminar</button>
+      </div>
     </div>
   </div>
   

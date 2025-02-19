@@ -26,4 +26,21 @@ export class CarrerasComponenteComponent {
   
     }
 
+    selectedIndex: number | null = null;
+
+  // Mostrar las opciones al hacer clic en un div
+  showOptions(index: number): void {
+    this.selectedIndex = this.selectedIndex === index ? null : index; // Alterna la visibilidad del menú
+  }
+
+  modificarCarrera(carrera: any): void {
+    console.log('Modificar:', this.Carreras);
+    // Aquí puedes agregar la lógica para modificar la carrera
+  }
+
+  eliminarCarrera(carrera: any): void {
+    console.log('Eliminar:', this.Carreras);
+    // Aquí puedes agregar la lógica para eliminar la carrera
+  }
+
 }
