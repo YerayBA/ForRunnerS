@@ -4,11 +4,33 @@
       <h1>{{ Carrera.nombreCarrera }}</h1>
       <h2>{{ Carrera.lugar }}</h2>
       <p>⭐ Distancia: {{ Carrera.distancia }} Km</p>
-      <p>⭐ Fecha de Celebracion: {{ Carrera.fechaCelebracion }}</p>
+      <p>⭐ Fecha de Celebración: {{ Carrera.fechaCelebracion }}</p>
+  
+      <!-- Menú de opciones de modificar y eliminar -->
       <div *ngIf="selectedIndex === i" class="options-menu">
-        <button (click)="modificarCarrera(Carrera)">Modificar</button>
+        <button (click)="toggleEditForm(i)">Modificar</button>
         <button (click)="eliminarCarrera(i)">Eliminar</button>
+      </div>
+  
+      <!-- Formulario de modificación (inputs) -->
+      <div *ngIf="editingIndex === i" class="edit-form">
+        <label for="nombreCarrera">Nombre Carrera:</label>
+        <input [(ngModel)]="Carrera.nombreCarrera" id="nombreCarrera" type="text" />
+  
+        <label for="lugar">Lugar:</label>
+        <input [(ngModel)]="Carrera.lugar" id="lugar" type="text" />
+  
+        <label for="distancia">Distancia (Km):</label>
+        <input [(ngModel)]="Carrera.distancia" id="distancia" type="number" />
+  
+        <label for="fechaCelebracion">Fecha de Celebración:</label>
+        <input [(ngModel)]="Carrera.fechaCelebracion" id="fechaCelebracion" type="date" />
+  
+        <!-- Botones para guardar o cancelar -->
+        <button (click)="guardarCambios(i)">Guardar</button>
+        <button (click)="cancelarEdicion()">Cancelar</button>
       </div>
     </div>
   </div>
+  
   

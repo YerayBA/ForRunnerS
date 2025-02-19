@@ -30,4 +30,57 @@
     color: #333;
     margin: 10px 0;
   }
+
+  .edit-form {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .edit-form input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form button {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background: #d9534f; 
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  
+  .edit-form button:hover {
+    background-color: #b52b27;
+  }
+
+  .options-menu button {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background: #d9534f; 
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  
+  .options-menu button:hover {
+    background-color: #b52b27;
+  }
+
+
+  
+  
   

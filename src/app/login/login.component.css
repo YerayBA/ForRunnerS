@@ -1,21 +1,21 @@
 .main {
   display: flex;
-  justify-content: space-between; /* Esto se asegura de que los divs se distribuyan horizontalmente */
-  align-items: stretch; /* Esto hace que los divs ocupen toda la altura de la pantalla */
+  justify-content: space-between; 
+  align-items: stretch; 
   height: 100vh;
   background-color: #f8e0e0;
   font-family: Arial, sans-serif;
 }
 
 .container, .container2 {
-  width: 50%; /* Ambos divs ocupan la mitad de la pantalla */
-  height: 100vh; /* Asegura que ambos divs tengan altura completa */
+  width: 50%; 
+  height: 100vh; 
   box-sizing: border-box;
 }
 
 .container {
   padding: 30px;
-  background-color: #fff; /* Fondo blanco para el formulario */
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   opacity: 0.9;
@@ -24,7 +24,7 @@
 .container2 {
   background-image: url("C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/FondoPantalla.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /* Asegura que la imagen ocupe todo el espacio disponible */
+  background-size: cover; 
   background-position: center;
 }
 
