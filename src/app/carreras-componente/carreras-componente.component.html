@@ -1,5 +1,25 @@
 <div class="catalog">
     <h1>Carreras</h1>
+    <button class="addButton" (click)="addMenuCarrera()">Añadir Carrera</button>
+    <div class="AñadirFormulario" *ngIf="showMenu">
+     <h3>Añadir Carrera</h3>
+   <form>
+    <label for="nombre">Nombre de la Carrera:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombreCarrera">
+    <br>
+    <label for="nombre">Lugar de la Carrera:</label>
+    <input type="text" id="lugar" name="lugar" [(ngModel)]="lugar">
+    <br>
+    <label for="nombre">Distancia:</label>
+    <input type="number" id="distancia" name="distancia" [(ngModel)]="distancia">
+    <br>
+    <label for="nombre">Fecha de Celebración:</label>
+    <input type="date" id="fecha" name="fecha" [(ngModel)]="fechaCelebracion">
+    <br>
+    <button  (click)="addCarrera()">Guardar</button>
+     </form>
+       </div>
+
     <div class="Carreras" *ngFor="let Carrera of Carreras; let i = index" (click)="showOptions(i)">
       <h1>{{ Carrera.nombreCarrera }}</h1>
       <h2>{{ Carrera.lugar }}</h2>
@@ -29,7 +49,9 @@
         <!-- Botones para guardar o cancelar -->
         <button (click)="guardarCambios(i)">Guardar</button>
         <button (click)="cancelarEdicion()">Cancelar</button>
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
       </div>
+      
     </div>
   </div>
   

@@ -12,6 +12,8 @@ export class CarrerasService {
  private apiUrlEliminar = 'https://localhost:7208/BorrarCarrera';
 
  private apiUrlModificar = 'https://localhost:7208/ModificarCarrera';
+
+  private apiUrlCrear = 'https://localhost:7208/registroCarrera'; 
 ;
 
   constructor(private http: HttpClient) { }
@@ -28,4 +30,9 @@ export class CarrerasService {
   modificarCarrera( carreraModificada: any): Observable<any>{
     return this.http.put<any>(this.apiUrlModificar, carreraModificada);
   }
+  
+  crearCarrera(Carrera: any): Observable<any> {
+    return this.http.post<any>(this.apiUrlCrear, Carrera);
+  }
+
 }

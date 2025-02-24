@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrerasService} from '../carreras-service.service';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-carreras-componente',
   imports: [CommonModule, FormsModule],
@@ -30,6 +31,7 @@ export class CarrerasComponente {
 
     selectedIndex: number | null = null;
     editingIndex: number | null = null;
+    errorMessage: string = '';
   
   showOptions(index: number): void {
     this.selectedIndex = this.selectedIndex === index ? null : index; 
@@ -68,4 +70,41 @@ export class CarrerasComponente {
     }
   }
 
-}
+  showMenu: boolean = false;  // Esta variable controla la visibilidad del menú
+
+  addMenuCarrera() {
+    // Cambia el valor de showMenu cuando se hace clic en el botón
+    this.showMenu = !this.showMenu;
+
+  }
+
+  nombreCarrera: string = '';
+  lugar: string = '';
+  distancia: number = 0;
+  fechaCelebracion: string = '';
+  resultMessage: string = '';
+  successMessage: string = '';  
+
+  addCarrera() {
+    const Carrera = {
+      nombreCarrera: this.nombreCarrera,
+      Lugar : this.lugar,
+      Distancia : this.distancia,
+      fechaCelebracion : this.fechaCelebracion,
+    }
+
+      this.CarrerasService.crearCarrera(Carrera).subscribe(
+        (response) => {
+          this.successMessage = response;
+          this.successMessage = 'Se ha registrado con éxito';
+        },
+        (error) => {
+          this.resultMessage = error;
+          this.resultMessage = 'Ocurrió un error durante el registro';
+        }
+      );    
+    };
+
+  }
+
+
