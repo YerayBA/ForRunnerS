@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ZapatillasService } from '../zapatillas.service';
+import { ZapatillasService } from '../../Servicios/zapatillas.service';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 
 @Component({
@@ -12,9 +12,9 @@ import {HttpClient, HttpHandler} from '@angular/common/http';
 })
 export class ZapatillasComponenteComponent {
 
-  private zapatillasService = inject(ZapatillasService); // Inyectamos el servicio
-  zapatillas: any[] = []; // Array para almacenar las zapatillas
-
+  private zapatillasService = inject(ZapatillasService); 
+  zapatillas: any[] = []; 
+  
   constructor() {
     // Obtener las zapatillas del servicio
     this.zapatillasService.getZapatillas().subscribe(

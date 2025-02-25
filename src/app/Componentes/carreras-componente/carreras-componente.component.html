@@ -26,13 +26,12 @@
       <p>⭐ Distancia: {{ Carrera.distancia }} Km</p>
       <p>⭐ Fecha de Celebración: {{ Carrera.fechaCelebracion }}</p>
   
-      <!-- Menú de opciones de modificar y eliminar -->
+     
       <div *ngIf="selectedIndex === i" class="options-menu">
         <button (click)="toggleEditForm(i)">Modificar</button>
         <button (click)="eliminarCarrera(i)">Eliminar</button>
       </div>
   
-      <!-- Formulario de modificación (inputs) -->
       <div *ngIf="editingIndex === i" class="edit-form">
         <label for="nombreCarrera">Nombre Carrera:</label>
         <input [(ngModel)]="Carrera.nombreCarrera" id="nombreCarrera" type="text" />

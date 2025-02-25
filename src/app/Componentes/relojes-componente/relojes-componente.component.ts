@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RelojesService } from '../relojes.service';
+import { RelojesService } from '../../Servicios/relojes.service';
 
 @Component({
   selector: 'app-relojes-componente',
@@ -14,11 +14,11 @@ export class RelojesComponenteComponent {
 
 
 
-private RelojesService = inject(RelojesService); // Inyectamos el servicio
-  relojes: any[] = []; // Array para almacenar las zapatillas
+private RelojesService = inject(RelojesService); 
+  relojes: any[] = []; 
 
   constructor() {
-    // Obtener las zapatillas del servicio
+   
     this.RelojesService.getRelojes().subscribe(
       (data) => {
         this.relojes = data;

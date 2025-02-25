@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarrerasService} from '../carreras-service.service';
+import { CarrerasService} from '../../Servicios/carreras-service.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -70,10 +70,10 @@ export class CarrerasComponente {
     }
   }
 
-  showMenu: boolean = false;  // Esta variable controla la visibilidad del menú
+  showMenu: boolean = false;  
 
   addMenuCarrera() {
-    // Cambia el valor de showMenu cuando se hace clic en el botón
+  
     this.showMenu = !this.showMenu;
 
   }

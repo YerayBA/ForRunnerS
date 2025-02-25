@@ -12,7 +12,7 @@ export class RelojesService {
 
   constructor(private http: HttpClient) { }
 
-  // Método para obtener las zapatillas
+ 
   getRelojes(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }

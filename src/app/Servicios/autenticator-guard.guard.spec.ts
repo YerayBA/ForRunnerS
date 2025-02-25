@@ -15,10 +15,10 @@ describe('AuthGuard', () => {
     const authServiceMock = jasmine.createSpyObj('AuthService', ['isAuthenticated']);
 
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule], // Importa RouterTestingModule para pruebas de enrutador
+      imports: [RouterTestingModule], 
       providers: [
         AuthGuard,
-        { provide: AuthService, useValue: authServiceMock }, // Usa el mock del servicio
+        { provide: AuthService, useValue: authServiceMock }, 
         Router
       ]
     });
@@ -33,26 +33,26 @@ describe('AuthGuard', () => {
   });
 
   it('should return true if the user is authenticated', () => {
-    authService.isAuthenticated.and.returnValue(true); // Simula que el usuario está autenticado
+    authService.isAuthenticated.and.returnValue(true); 
 
     const canActivate = authGuard.canActivate(
-      { } as any, // Puedes pasar cualquier objeto vacío, ya que no lo estamos usando aquí
-      { } as any // Lo mismo para el estado
+      { } as any, 
+      { } as any 
     );
 
     expect(canActivate).toBe(true);
   });
 
   it('should return false and redirect if the user is not authenticated', () => {
-    authService.isAuthenticated.and.returnValue(false); // Simula que el usuario no está autenticado
-    spyOn(router, 'navigate'); // Espía la llamada a navigate del router
+    authService.isAuthenticated.and.returnValue(false); 
+    spyOn(router, 'navigate'); 
 
     const canActivate = authGuard.canActivate(
-      { } as any, // Igual que antes
+      { } as any, 
       { } as any
     );
 
     expect(canActivate).toBe(false);
-    expect(router.navigate).toHaveBeenCalledWith(['/login']); // Verifica que se redirija al login
+    expect(router.navigate).toHaveBeenCalledWith(['/login']); 
   });
 });

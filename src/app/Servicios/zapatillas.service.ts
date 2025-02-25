@@ -11,7 +11,7 @@ export class ZapatillasService {
 
   constructor(private http: HttpClient) { }
 
-  // Método para obtener las zapatillas
+  
   getZapatillas(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
