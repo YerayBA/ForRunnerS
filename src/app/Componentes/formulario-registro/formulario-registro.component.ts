@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Register } from '../registro.service';
+import { Register } from '../../Servicios/registro.service';
 import { CommonModule } from '@angular/common';
 
 

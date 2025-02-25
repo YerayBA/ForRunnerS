@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
-import { LoginComponent } from './login/login.component';
-import { FormularioRecuperarComponent } from './formulario-recuperar/formulario-recuperar.component';
-import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
-import { RelojesComponenteComponent } from './relojes-componente/relojes-componente.component';
-import { ZapatillasComponenteComponent } from './zapatillas-componente/zapatillas-componente.component';
-import { CarrerasComponente } from './carreras-componente/carreras-componente.component';
-import { AuthGuard } from './autenticator-guard.guard';
+import { FormularioRegistroComponent } from './Componentes/formulario-registro/formulario-registro.component';
+import { LoginComponent } from './Componentes/login/login.component';
+import { FormularioRecuperarComponent } from './Componentes/formulario-recuperar/formulario-recuperar.component';
+import { PaginaprincipalComponent } from './Componentes/paginaprincipal/paginaprincipal.component';
+import { RelojesComponenteComponent } from './Componentes/relojes-componente/relojes-componente.component';
+import { ZapatillasComponenteComponent } from './Componentes/zapatillas-componente/zapatillas-componente.component';
+import { CarrerasComponente } from './Componentes/carreras-componente/carreras-componente.component';
+import { AuthGuard } from './Servicios/autenticator-guard.guard';
 
 export const routes: Routes = [
     { path: '', component:LoginComponent }, // Página de inicio
