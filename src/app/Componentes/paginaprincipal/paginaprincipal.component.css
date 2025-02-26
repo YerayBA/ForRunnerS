@@ -77,6 +77,12 @@ align-items: center;
   
 }
 
+.relojes {
+  background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/gpr-h1000-9-kv.avif');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+}
 
 .tienda {
   height: 1050px;
