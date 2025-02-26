@@ -1,40 +1,18 @@
-main{
-align-items: center;
 
+.main {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  min-height: 100vh;
+  align-items: center;
 }
 
-.ContainerTitle {
-  background-color: #FF8C00; /* Naranja */
-  color: black;
+.navbar1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.ContainerTitle h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.ContainerTitle h2 {
-  margin: 0;
-  font-size: 18px;
-}
-
-/* Estilo para la barra de navegación */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #333;
-  color: white;
-  padding: 10px 20px;
-}
-
-.navbar-logo img {
-  width: 50px; 
 }
 
 .navbar-links a {
@@ -45,82 +23,116 @@ align-items: center;
 }
 
 .navbar-links a:hover {
-  color: #FF8C00; /* Cambio de color al pasar el ratón */
+  color: #FF8C00;
   transition: color 0.3s ease;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 20px; 
-  flex-direction: column;
-  align-items: center;
+.ContainerTitle {
+  text-align: center;
+  background-color: #FF8C00;
+  color: black;
+  padding: 20px;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  width: 100%;
-  background: linear-gradient(45deg, #FFDAB9, #FFB84D, #FF8C00);
 }
 
-.relojes, .carreras, .zapatillas {
+.ContainerTitle h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.ContainerTitle h2 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar-logo img {
+  width: 50px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  color: #FF8C00;
+  transition: color 0.3s ease;
+}
+
+
+.main2 {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 30px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  width: 30%; 
+}
+
+/* Estilos individuales de los productos */
+.relojes, .carreras, .zapatillas, .tienda {
   color: black;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
-  margin-bottom: 10px; 
-  height: 310px;
-  width: 300px;
-  margin-top: 50px;
-  transition: transform 1s ease-in-out; 
-}
-
-.relojes:hover, .carreras:hover, .zapatillas:hover {
-  transform: scale(1.2);
+  height: 250px;
+  width: 75%; 
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
 .relojes {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/gpr-h1000-9-kv.avif');
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center;
 }
 
 .zapatillas {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/zapatillasCorrer.webp');
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center;
 }
 
 .carreras {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/CarreraImagen.webp');
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center;
 }
 
-.tienda {
-  height: 1050px;
-  width: 1000px;
-  margin-right:1400px;
-  background-color: #FF8C00; 
-  color: black;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background-image:  url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/TiendaOnline.jpeg'); ;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center;
-  margin-top: 50px;
-  transition: transform 1s ease-in-out; 
+.tienda{
+  background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/TiendaOnline.jpeg');
+  width: 100%;
+  height: 900px;
+} 
+
+.relojes:hover, .carreras:hover, .zapatillas:hover {
+  transform: scale(1.1); /* Agrandar en hover */
 }
+
+/* Contenedor de la tienda */
+.container2 {
+  display: flex;
+  justify-content: center;
+  width: 60%; /* El contenedor de la tienda ocupa un 60% del ancho */
+}
+
+
 
 .tienda:hover {
   transform: scale(1.07);
 }
-
-
-
-
