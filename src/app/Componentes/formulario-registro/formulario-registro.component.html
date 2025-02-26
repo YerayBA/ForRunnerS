@@ -1,6 +1,6 @@
-
+<div class="main">
 <div class="formulario-registro">
-
+    <h2>¡Hazte Miembro de la Familia ForRunners!</h2>
     <input type="text" id="nombre" [(ngModel)]="nombre" name="username" placeholder="Nombre" required />
     <br>
     <input type="text" id="apellido" [(ngModel)]="apellido" name="username" placeholder="Apellido" required />
@@ -13,8 +13,7 @@
     <br>
     <input type="text" id="email" [(ngModel)]="email" name="username" placeholder="Correo Electrónico" required />
     <br>
-    <button (click)="register()">Registrarse</button>
-    
+    <button (click)="register()">Registrarse</button>  
     <p *ngIf="resultMessage" class="error">{{ resultMessage }}</p>
-
+</div>
 </div>
