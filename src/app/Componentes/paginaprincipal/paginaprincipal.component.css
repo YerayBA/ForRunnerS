@@ -104,20 +104,23 @@
 
 .relojes {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/gpr-h1000-9-kv.avif');
+  padding-left: 300px;
 }
 
 .zapatillas {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/zapatillasCorrer.webp');
+  padding-left: 300px;
 }
 
 .carreras {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/CarreraImagen.webp');
+  padding-left: 300px;
 }
 
 .tienda{
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/TiendaOnline.jpeg');
   width: 100%;
-  height: 900px;
+  height: 870px;
 } 
 
 .relojes:hover, .carreras:hover, .zapatillas:hover {
