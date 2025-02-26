@@ -100,21 +100,23 @@
   background-position: center;
   padding: 20px;
   transition: transform 0.3s ease;
+  padding-top: 50px;
+  margin-top: 35px;
 }
 
 .relojes {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/gpr-h1000-9-kv.avif');
-  padding-left: 300px;
+  padding-left: 650px;
 }
 
 .zapatillas {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/zapatillasCorrer.webp');
-  padding-left: 300px;
+  padding-left: 650px;
 }
 
 .carreras {
   background-image: url('C:/Users/YerayPatricia/source/repos/ForRunnerS/src/Imagenes/CarreraImagen.webp');
-  padding-left: 300px;
+  padding-left: 650px;
 }
 
 .tienda{
@@ -135,7 +137,45 @@
 }
 
 
-
 .tienda:hover {
   transform: scale(1.07);
 }
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #FF8C00; 
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  position: relative; 
+  transition: 0.3s;
+  font-weight: 400;
+  color:#fff;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8b739;
+  transition: 0.3s;
+  color:#fff;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+  width: 100%; 
+  color: #fff;
+}
+
