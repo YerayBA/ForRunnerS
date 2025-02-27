@@ -179,3 +179,52 @@
   color: #fff;
 }
 
+
+.cinta {
+  width: 100%;
+  overflow: hidden;  
+}
+
+.tarjetas {
+  display: flex;
+  animation: moverCinta 100s linear infinite;  
+}
+
+.carrera {
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes moverCinta {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+
+h3 {
+  color: #333;
+  margin: 10px 0;
+}

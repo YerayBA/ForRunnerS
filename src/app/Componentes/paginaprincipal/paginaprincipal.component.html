@@ -50,6 +50,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  <div class="cinta">
+    <div class="tarjetas">
+      <div class="carrera" *ngFor="let carrera of Carreras">
+        <h4>{{ carrera.nombreCarrera }}</h4>
+        <p>{{ carrera.lugar}}</p>
+      </div>
+    </div>
+  </div>
 
   <div class="main2">
     <div class="container">

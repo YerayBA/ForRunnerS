@@ -65,9 +65,20 @@ export class CarrerasComponente {
   }
 
   eliminarCarrera(index:number): void {
-    if (index > -1) {
-      this.Carreras.splice(index, 1); 
-    }
+    //if (index > -1) {
+      //this.Carreras.splice(index, 0); 
+   // }
+
+    const Carrera = this.Carreras[index];
+
+    this.CarrerasService.eliminarCarrera(Carrera).subscribe(
+      (response) => {
+        console.log('Carrera eliminada:', response);
+      },
+      (error) => {
+        console.error('Error al eliminar la carrera:', error);
+      }
+    );
   }
 
   showMenu: boolean = false;  
